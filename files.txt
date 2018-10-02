@@ -1,0 +1,14 @@
+tools/btgatt-client.c
+
+lib dependencies
+src/libshared-mainloop.la
+lib/libbluetooth-internal.la
+
+
+
+=============================================
+depbase=`echo tools/btgatt-client.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I.  -I./lib     -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include  -g -O2 -MT tools/btgatt-client.o -MD -MP -MF $depbase.Tpo -c -o tools/btgatt-client.o tools/btgatt-client.c &&\
+mv -f $depbase.Tpo $depbase.Po
+/bin/bash ./libtool  --tag=CC   --mode=link gcc    -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include  -g -O2   -o tools/btgatt-client tools/btgatt-client.o src/uuid-helper.o src/libshared-mainloop.la lib/libbluetooth-internal.la
+libtool: link: gcc -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -g -O2 -o tools/btgatt-client tools/btgatt-client.o src/uuid-helper.o  src/.libs/libshared-mainloop.a lib/.libs/libbluetooth-internal.a
